@@ -1,0 +1,89 @@
+QUESTION 1
+
+A.
+<head>
+    
+    <title>Document</title>
+</head>
+<style>
+    table {
+        text-transform: uppercase;
+    }
+    
+    .cn {
+        text-align: center;
+    }
+    
+    .blw {
+        vertical-align: bottom;
+    }
+</style>
+
+<body>
+    <table border="1" cellpadding="0" cellspacing="0" width="200px" style="border-collapse:collapse;">
+        <tr>
+            <td colspan="2">blue</td>
+            <td>pink</td>
+            <td colspan="2" rowspan="2" class="cn blw">yellow</td>
+        </tr>
+        <tr>
+            <td>yellow</td>
+            <td>red</td>
+            <td class="cn">grey</td>
+        </tr>
+        <tr>
+            <td rowspan="3" class="cn">green</td>
+            <td>white</td>
+            <td>orange</td>
+            <td colspan="2">lime</td>
+        </tr>
+        <tr>
+            <td rowspan="3">grey</td>
+            <td colspan="3" class="cn">maroon</td>
+
+        </tr>
+        <tr>
+            <td>pink</td>
+            <td>lime</td>
+            <td>blue</td>
+        </tr>
+        <tr>
+            <td>orange</td>
+            <td>yellow</td>
+            <td>red</td>
+            <td>grey</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+
+B.
+import java.io.*;
+class square {
+    public static void main(String args[]) {
+
+        System.out.println("Enter size of array:");
+        int A[] = new int [args.length];
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < args.length; i++) {
+            A[i] = Integer.parseInt(args[i]);
+        }
+
+        int B[] = new int [args.length];
+        for (int i = 0; i < args.length; i++) {
+            B[i] = A[i] * A[i];
+        }
+
+        System.out.println("A");
+        for (int i = 0; i < args.length; i++) {
+            System.out.print(A[i] + " ");
+        }
+        System.out.println();
+
+        System.out.println("B");
+        for (int i = 0; i < args.length; i++) {
+            System.out.print(B[i] + " ");
+        }
+    }
+}
